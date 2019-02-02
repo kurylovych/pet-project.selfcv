@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  $intros = App\Intro::all();
+  $abouts = App\About::all();
+  $educs = App\Educ::all();
+  $jobs = App\Job::all();
+  $comments = App\Comment::all();
+  $contacts = App\Contact::all();
+  return view('welcome', compact('intros','abouts', 'educs', 'jobs', 'comments', 'contacts'));
 });
 
 
