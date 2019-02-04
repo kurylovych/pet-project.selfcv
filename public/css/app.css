@@ -10491,6 +10491,45 @@ a.text-dark:focus {
   }
 }
 
+h1 {
+  font-size: 7.5rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 2.5rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: normal;
+}
+
+.introduction {
+  height: 100vh;
+  background: white;
+  background: linear-gradient(45deg, white 30%, black 100%);
+}
+
+.introduction .intro-data {
+  position: absolute;
+  top: 40vh;
+  left: 20%;
+}
+
+.introduction .intro-data h1 {
+  line-height: 100%;
+}
+
+.introduction .intro-image {
+  text-align: center;
+}
+
+.introduction .intro-image img {
+  width: 80%;
+  position: relative;
+  text-align: center;
+  top: 12vh;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

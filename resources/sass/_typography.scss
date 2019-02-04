@@ -1,2 +1,22 @@
 // Typography
 $main-font: "Nunito Sans", sans-serif;
+
+%into-name {
+  font-size: 7.5rem;
+  font-family: $main-font;
+  font-weight: bold;
+}
+
+%intro-position {
+  font-size: 2.5rem;
+  font-family: $main-font;
+  font-weight: normal;
+}
+
+h1 {
+  @extend %into-name;
+}
+
+h5 {
+  @extend %intro-position;
+}
