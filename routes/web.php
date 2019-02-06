@@ -18,7 +18,8 @@ Route::get('/', function () {
   $jobs = App\Job::all();
   $comments = App\Comment::all();
   $contacts = App\Contact::all();
-  return view('home', compact('intros','abouts', 'educs', 'jobs', 'comments', 'contacts'));
+  $skill_threes = App\SkillThree::all();
+  return view('home', compact('intros','abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes'));
 });
 
 Route::get('/projects', function () {
