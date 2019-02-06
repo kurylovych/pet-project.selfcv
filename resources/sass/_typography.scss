@@ -11,6 +11,11 @@ $main-font: "Nunito Sans", sans-serif;
     font-weight: normal;
 }
 
+%basic-font-bold {
+    font-family: $main-font;
+    font-weight: bolder;
+}
+
 h1 {
     @extend %header-font;
     font-size: 7.5rem;
@@ -26,8 +31,14 @@ p {
     font-size: 1.25rem;
 }
 
-a {
+i, span ,a {
     @extend %basic-font;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+b {
+    @extend %basic-font-bold;
     font-size: 1rem;
 }
 

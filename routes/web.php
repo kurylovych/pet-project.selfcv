@@ -12,24 +12,26 @@
 */
 
 Route::get('/', function () {
-  $intros = App\Intro::all();
-  $abouts = App\About::all();
-  $educs = App\Educ::all();
-  $jobs = App\Job::all();
-  $comments = App\Comment::all();
-  $contacts = App\Contact::all();
-  $skill_threes = App\SkillThree::all();
-  return view('home', compact('intros','abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes'));
+    $intros = App\Intro::all();
+    $abouts = App\About::all();
+    $educs = App\Educ::all();
+    $jobs = App\Job::all();
+    $comments = App\Comment::all();
+    $contacts = App\Contact::all();
+    $skill_threes = App\SkillThree::all();
+    $website_headers = App\WebsiteHeader::all();
+    $projects = App\Project::orderBy('id', 'desc')->take(6)->get();
+    return view('home', compact('intros', 'abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes', 'website_headers', 'projects'));
 });
 
 Route::get('/projects', function () {
-  $projects = App\Project::all();
-  return view('projects', compact('projects'));
+    $projects = App\Project::all();
+    return view('projects', compact('projects'));
 });
 
 Route::get('/project/{id}', function ($id) {
-  $project = App\Project::find($id);
-  return view('project', compact('project'));
+    $project = App\Project::find($id);
+    return view('project', compact('project'));
 });
 
 Route::group(['prefix' => 'admin'], function () {

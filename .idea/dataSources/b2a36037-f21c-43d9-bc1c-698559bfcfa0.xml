@@ -1173,37 +1173,35 @@
     <table id="299" parent="6" name="users">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <column id="300" parent="279" name="id">
+    <table id="300" parent="6" name="website_headers">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <column id="301" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="279" name="created_at">
+    <column id="302" parent="279" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="279" name="updated_at">
+    <column id="303" parent="279" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="279" name="title">
-      <Position>4</Position>
-      <DataType>mediumtext|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
     <column id="304" parent="279" name="text">
-      <Position>5</Position>
+      <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="305" parent="279" name="signature">
-      <Position>6</Position>
+      <Position>5</Position>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -2267,5 +2265,34 @@ role_id</ColNames>
       <RefTableName>roles</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
+    <column id="496" parent="300" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="497" parent="300" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="498" parent="300" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="499" parent="300" name="name">
+      <Position>4</Position>
+      <DataType>mediumtext|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="500" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
