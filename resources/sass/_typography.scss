@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 // Typography
 $main-font: "Nunito Sans", sans-serif;
 
@@ -24,14 +28,27 @@ h1 {
 h2 {
     @extend %header-font;
     font-size: 3.125rem;
+    margin: 70px 0 40px 0;
+    text-align: center;
+}
+
+h3 {
+    @extend %header-font;
+    font-size: 2.25rem;
 }
 
 p {
     @extend %basic-font;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
-i, span ,a {
+i, a {
+    @extend %basic-font;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+span {
     @extend %basic-font;
     font-size: 1rem;
     font-style: normal;
@@ -44,6 +61,5 @@ b {
 
 h5 {
     @extend %basic-font;
-    font-size: 2.5rem;
-    //font-size: 3.125rem;
+    font-size: 1.875rem;
 }

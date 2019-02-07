@@ -10491,6 +10491,11 @@ a.text-dark:focus {
   }
 }
 
+html {
+  font-size: 16px;
+}
+
+h3,
 h2,
 h1 {
   font-family: "Nunito Sans", sans-serif;
@@ -10498,8 +10503,8 @@ h1 {
 }
 
 h5,
-i,
 span,
+i,
 a,
 p {
   font-family: "Nunito Sans", sans-serif;
@@ -10517,15 +10522,25 @@ h1 {
 
 h2 {
   font-size: 3.125rem;
+  margin: 70px 0 40px 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.25rem;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 i,
-span,
 a {
+  font-size: 1rem;
+  font-style: normal;
+}
+
+span {
   font-size: 1rem;
   font-style: normal;
 }
@@ -10535,7 +10550,7 @@ b {
 }
 
 h5 {
-  font-size: 2.5rem;
+  font-size: 1.875rem;
 }
 
 .introduction {
@@ -10562,11 +10577,11 @@ h5 {
   width: 80%;
   position: relative;
   text-align: center;
-  top: 12vh;
+  top: 10vh;
 }
 
 .description {
-  margin-top: 20vh;
+  margin-top: 16vh;
 }
 
 .description .about {
@@ -10575,13 +10590,13 @@ h5 {
 
 .description .contact-buttons {
   text-align: center;
-  margin-top: 20px;
+  margin: 50px 0;
 }
 
 .description .contact-buttons a {
   text-transform: uppercase;
   color: #000000;
-  padding: 16px 40px;
+  padding: 13px 32px;
   background-color: #C4C4C4;
 }
 
@@ -10591,51 +10606,104 @@ h5 {
 }
 
 .description .overview-box {
-  margin-top: 12vh;
+  margin-top: 50px;
   width: 80%;
 }
 
-.description .overview-box b,
-.description .overview-box span {
+.description .overview-box .overview-content {
+  margin: 28px 0;
+}
+
+.description .overview-box .overview-content b,
+.description .overview-box .overview-content span {
   display: block;
 }
 
-.description .overview-box i:last-child {
-  display: none;
+.description .overview-box .overview-content b {
+  color: #C4C4C4;
+}
+
+.description .overview-box .overview-content .date {
+  margin-bottom: 8px;
+}
+
+.description .overview-box .skills {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .project {
   text-align: center;
 }
 
-.project img {
-  max-width: 80%;
+.project .project-single {
+  margin-bottom: 50px;
+}
+
+.project .project-single img {
+  max-width: 100%;
   max-height: 423px;
 }
 
-.comment-section {
+.project .project-single h5 {
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project .project-single:hover h5 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.comments {
+  min-height: 75vh;
+}
+
+.comments .comment-section {
   min-height: 40vh;
   width: 70%;
   margin: 0 auto;
   background-color: rgba(196, 196, 196, 0.28);
 }
 
-.comment-section .comment-content {
+.comments .comment-section .comment-content {
   padding: 5vh 100px;
   text-align: center;
 }
 
-.comment-section .comment-content img {
+.comments .comment-section .comment-content p {
+  line-height: 28px;
+}
+
+.comments .comment-section .comment-content img {
   border-radius: 50%;
   max-width: 100px;
 }
 
-.carousel-control-next-icon {
+.comments .comment-section .comment-content span {
+  display: block;
+}
+
+.comments .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23828282' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-.carousel-control-prev-icon {
+.comments .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23828282' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 50px 0;
+}
+
+footer .short-info span {
+  display: block;
 }
 
 .navbar-laravel {

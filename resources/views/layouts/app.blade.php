@@ -24,7 +24,10 @@
 <div id="app">
 	<div>
 		@yield('content')
+
+        @include('inc.footer')
 	</div>
+
 </div>
 </body>
 </html>

@@ -20,8 +20,9 @@ Route::get('/', function () {
     $contacts = App\Contact::all();
     $skill_threes = App\SkillThree::all();
     $website_headers = App\WebsiteHeader::all();
+    $links = App\Link::all();
     $projects = App\Project::orderBy('id', 'desc')->take(6)->get();
-    return view('home', compact('intros', 'abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes', 'website_headers', 'projects'));
+    return view('home', compact('intros', 'abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes', 'website_headers', 'projects', 'links'));
 });
 
 Route::get('/projects', function () {

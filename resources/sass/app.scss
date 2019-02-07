@@ -12,7 +12,10 @@
 @import 'typography';
 
 // Pages
-@import 'pages/home';
+@import 'pages/home/home';
+
+// Footer
+@import 'pages/footer';
 
 .navbar-laravel {
   background-color: #fff;

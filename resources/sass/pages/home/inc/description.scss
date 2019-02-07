@@ -1,0 +1,54 @@
+
+.description {
+    margin-top: 16vh;
+
+    .about {
+        text-align: center;
+    }
+
+    .contact-buttons {
+        text-align: center;
+        margin: 50px 0;
+
+        a {
+            text-transform: uppercase;
+            color: $black;
+            padding: 13px 32px;
+            background-color: $gray;
+
+            &:last-child {
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
+
+    .overview-box {
+        margin-top: 50px;
+        width: 80%;
+
+        .overview-content {
+            margin: 28px 0;
+            //margin-bottom: 28px;
+
+            b, span {
+                display: block;
+
+            }
+
+            b {
+                color: $gray;
+            }
+
+            .date {
+                margin-bottom: 8px;
+            }
+        }
+
+        .skills {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+}
+

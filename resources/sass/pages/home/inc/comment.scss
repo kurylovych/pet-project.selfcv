@@ -1,0 +1,38 @@
+.comments {
+    min-height: 75vh;
+
+    .comment-section {
+        min-height: 40vh;
+        width: 70%;
+        margin: 0 auto;
+        background-color: rgb(196, 196, 196, 0.28);
+
+        .comment-content {
+            padding: 5vh 100px;
+            text-align: center;
+
+            p {
+                line-height: 28px;
+            }
+
+            img {
+                border-radius: 50%;
+                max-width: 100px;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    // carousel
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23828282' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23828282' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+    }
+
+}
