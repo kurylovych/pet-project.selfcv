@@ -12,8 +12,12 @@
                             <h5>{{ $intro->position }}</h5>
                         </div>
                     </div>
-                    <div class="col-6 intro-image">
-                        <img src="{{ Voyager::image( $intro->img ) }}">
+                    <div class="col-6">
+                        <div class="intro-image">
+
+
+                            <img src="{{ Voyager::image( $intro->img ) }}">
+                        </div>
                     </div>
                 </div>
             @endforeach
