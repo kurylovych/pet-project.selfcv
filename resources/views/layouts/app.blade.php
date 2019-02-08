@@ -23,8 +23,8 @@
 <body>
 <div id="app">
 	<div>
-		@yield('content')
 
+        @yield('content')
         @include('inc.footer')
 	</div>
 

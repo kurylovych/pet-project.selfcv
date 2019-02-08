@@ -21,18 +21,26 @@ Route::get('/', function () {
     $skill_threes = App\SkillThree::all();
     $website_headers = App\WebsiteHeader::all();
     $links = App\Link::all();
+    $navigations = App\Navigation::all();
     $projects = App\Project::orderBy('id', 'desc')->take(6)->get();
-    return view('home', compact('intros', 'abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes', 'website_headers', 'projects', 'links'));
+    return view('home', compact('intros', 'abouts', 'educs', 'jobs', 'comments', 'contacts', 'skill_threes', 'website_headers', 'projects', 'links', 'navigations'));
 });
 
 Route::get('/projects', function () {
     $projects = App\Project::all();
-    return view('projects', compact('projects'));
+    $contacts = App\Contact::all();
+    return view('projects', compact('projects', 'contacts'));
+});
+
+Route::get('/test', function () {
+
+    return view('test');
 });
 
 Route::get('/project/{id}', function ($id) {
     $project = App\Project::find($id);
-    return view('project', compact('project'));
+    $contacts = App\Contact::all();
+    return view('project', compact('project', 'contacts'));
 });
 
 Route::group(['prefix' => 'admin'], function () {

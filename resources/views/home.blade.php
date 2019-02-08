@@ -4,7 +4,9 @@
 
     <div>
         <div class="container-fluid introduction">
-            @foreach($intros as $intro)
+            @include('inc.navbar')
+
+        @foreach($intros as $intro)
                 <div class="row">
                     <div class="col-6">
                         <div class="intro-data">
