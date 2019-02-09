@@ -6,7 +6,7 @@
         <div class="container-fluid introduction">
             @include('inc.navbar')
 
-        @foreach($intros as $intro)
+            @foreach($intros as $intro)
                 <div class="row">
                     <div class="col-6">
                         <div class="intro-data">
@@ -59,11 +59,16 @@
                                 <h3>{{$website_header->name}}</h3>
                             @endif
                         @endforeach
+
+                            {{--@foreach($statements as $operation)--}}
+                                {{--<tr> <td>{{ date("F", mktime(0, 0, 0, $operation->date, 1)) }}</td></tr>--}}
+                            {{--@endforeach--}}
+
                         @foreach($educs as $educ)
                             <div class="overview-content">
                                 <div class="date">
-                                    <i>{{ $educ->start_date }}</i>
-                                    <i>{{ $educ->end_date }}</i>
+                                    <i>{{ $educ->start_date->format('F Y') }} - </i>
+                                    <i>{{ $educ->end_date->format('F Y') }}</i>
                                 </div>
                                 <span>{{ $educ->degree }}</span>
                                 <b>{{ $educ->specialization }}</b>
@@ -82,8 +87,8 @@
                         @endforeach
                         @foreach($jobs as $job)
                             <div class="overview-content">
-                                <i>{{ $job->start_date }}</i>
-                                <i>{{ $job->end_date }}</i>
+                                <i>{{ $job->start_date->format('F Y') }} - </i>
+                                <i>{{ $job->end_date->format('F Y') }}</i>
                                 <b>{{ $job->position }}</b>
                                 <span>{{ $job->company }}</span>
                             </div>
@@ -120,8 +125,12 @@
                 @foreach($projects as $project)
                     <div class="col-4">
                         <div class="project-single">
+                            <div class="project-img"
+                                 style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
+
+                            </div>
                             <h5>{{ $project->title}}</h5>
-                            <img src="{{ Voyager::image( $project->introduction_img ) }}">
+                            {{--<img src="{{ Voyager::image( $project->introduction_img ) }}">--}}
                         </div>
                     </div>
                 @endforeach

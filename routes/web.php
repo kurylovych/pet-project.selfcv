@@ -14,7 +14,7 @@
 Route::get('/', function () {
     $intros = App\Intro::all();
     $abouts = App\About::all();
-    $educs = App\Educ::all();
+    $educs = App\Educ::orderBy('id', 'desc')->get();
     $jobs = App\Job::all();
     $comments = App\Comment::all();
     $contacts = App\Contact::all();
