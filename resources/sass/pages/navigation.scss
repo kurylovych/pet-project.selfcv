@@ -1,12 +1,21 @@
 
 .navbar {
-    z-index: 9999;
-    position: absolute;
-    right: 1.1%;
-    top: 1%;
+    padding: 0;
 
-    li a {
-        color: white;
+    .nav-item {
+        margin-right: 20px;
+        .nav-link {
+            color: $white;
+        }
+    }
+
+    .active {
+        background-color: $red;
+
+        .nav-link {
+            color: $white;
+            //padding: 30px 10px 5px 10px;
+        }
     }
 
 }

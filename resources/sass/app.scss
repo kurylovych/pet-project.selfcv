@@ -11,12 +11,16 @@
 // Typography
 @import 'typography';
 
+// NavBar
+@import 'pages/navigation';
+
 // Pages
 @import 'pages/home/home';
+@import 'pages/projects/projects';
 
 // inc
 @import 'pages/footer';
-@import 'pages/navigation';
+
 
 .navbar-laravel {
   background-color: #fff;

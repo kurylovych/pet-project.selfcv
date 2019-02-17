@@ -16,8 +16,6 @@
                     </div>
                     <div class="col-6">
                         <div class="intro-image">
-
-
                             <img src="{{ Voyager::image( $intro->img ) }}">
                         </div>
                     </div>

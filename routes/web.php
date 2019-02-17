@@ -27,20 +27,18 @@ Route::get('/', function () {
 });
 
 Route::get('/projects', function () {
-    $projects = App\Project::all();
+    $projects = App\Project::orderBy('id', 'desc')->get();
     $contacts = App\Contact::all();
-    return view('projects', compact('projects', 'contacts'));
+    $navigations = App\Navigation::all();
+    return view('projects', compact('projects', 'contacts', 'navigations'));
 });
 
-Route::get('/test', function () {
-
-    return view('test');
-});
 
 Route::get('/project/{id}', function ($id) {
     $project = App\Project::find($id);
     $contacts = App\Contact::all();
-    return view('project', compact('project', 'contacts'));
+    $navigations = App\Navigation::all();
+    return view('project', compact('project', 'contacts', 'navigations'));
 });
 
 Route::group(['prefix' => 'admin'], function () {

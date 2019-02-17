@@ -1,14 +1,16 @@
 
 .introduction {
     height: 100vh;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 30%, rgba(0, 0, 0, 1) 100%);
+    //background: rgb(255, 255, 255);
+    //background: linear-gradient(45deg, rgba(255, 255, 255, 1) 30%, rgba(0, 0, 0, 1) 100%);
+    background-color: $black;
 
     .intro-data {
         position: absolute;
         top: 40vh;
         left: 20%;
         z-index: 9999;
+        color: $white;
 
         h1 {
             line-height: 100%;
