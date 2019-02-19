@@ -1,3 +1,4 @@
+
 <footer>
     <div class="container">
         <div class="row">
@@ -13,8 +14,6 @@
                     <span>{!! $contact->text !!} </span>
                 </div>
             @endforeach
-
         </div>
-
     </div>
 </footer>

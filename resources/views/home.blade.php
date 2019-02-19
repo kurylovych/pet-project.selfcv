@@ -58,9 +58,9 @@
                             @endif
                         @endforeach
 
-                            {{--@foreach($statements as $operation)--}}
-                                {{--<tr> <td>{{ date("F", mktime(0, 0, 0, $operation->date, 1)) }}</td></tr>--}}
-                            {{--@endforeach--}}
+                        {{--@foreach($statements as $operation)--}}
+                        {{--<tr> <td>{{ date("F", mktime(0, 0, 0, $operation->date, 1)) }}</td></tr>--}}
+                        {{--@endforeach--}}
 
                         @foreach($educs as $educ)
                             <div class="overview-content">

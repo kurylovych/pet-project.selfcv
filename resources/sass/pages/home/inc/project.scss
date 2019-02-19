@@ -8,9 +8,10 @@
         .project-img {
             opacity: 1;
             transition: opacity 0.3s ease-in-out;
-            height: 200px;
+            height: 300px;
             width: 100%;
             background-size: cover;
+            background-position: center;
         }
 
         img {

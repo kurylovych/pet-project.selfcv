@@ -2,12 +2,24 @@
 
 @section('content')
 
-	<div>
+    <div>
+        <div class="container-fluid projects-introduction">
+            @include('inc.navbar')
+        </div>
 
-		<h1>It works!</h1>
-        {{ $project->title }}
+        <div class="container projects-list">
+            <div class="row">
+                <div class="col-8"><img src="{{ Voyager::image( $project->conclusion_img ) }}" style="width: 100%"></div>
+            </div>
+        </div>
 
-        <img src="{{ Voyager::image( $project->conclusion_img ) }}" style="width: 100%">
+        {{--{{ $project->title }}--}}
 
-	</div>
+        {{--@php $pictures = json_decode($project->body_collage); @endphp--}}
+        {{--@foreach($pictures as $pic)--}}
+        {{--<img src="{{ Voyager::image( $pic ) }}" style="width:100px">--}}
+        {{--@endforeach--}}
+
+
+    </div>
 @endsection

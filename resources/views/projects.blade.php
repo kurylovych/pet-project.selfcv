@@ -15,32 +15,32 @@
                         <div class="col-6">
                             <div class="first-project-img"
                                  style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
+                                <div class="project-img-filter">
+                                </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <a href="project/{{$project->id}}"><h5>{{ $project->title }}</h5></a>
+                            <p>{!! str_limit($project->introduction, 100) !!}</p>
                         </div>
 
                     @elseif ($loop->index)
                         <div class="col-4">
-                            {{--<img src="{{ Voyager::image( $project->introduction_img ) }}">--}}
-
                             <div class="project-img"
                                  style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
+                                <div class="project-img-filter">
+                                </div>
                             </div>
 
                             <a href="project/{{$project->id}}"><h5>{{ $project->title }}</h5></a>
+                            <i>{{ $project->start_date->format('F Y') }} - </i>
+                            <i>{{ $project->end_date->format('F Y') }}</i>
+                            <p>{!! str_limit($project->body, 100) !!}</p>
                         </div>
 
                     @endif
                 @endforeach
             </div>
-
-            {{--@php $pictures = json_decode($project->body_collage); @endphp--}}
-            {{--@foreach($pictures as $pic)--}}
-            {{--<img src="{{ Voyager::image( $pic ) }}" style="width:100px">--}}
-            {{--@endforeach--}}
-
         </div>
     </div>
 @endsection

@@ -5,18 +5,46 @@
 }
 
 .projects-list {
+    margin-top: 4rem;
+
     .first-project-img {
         height: 400px;
         width: 100%;
         background-size: cover;
+        background-position: center;
+        filter: grayscale(100%);
+        transition: all 0.6s ease;
 
+        &:hover {
+            filter: grayscale(0);
+        }
+
+        .project-img-filter {
+            height: 400px;
+            width: 100%;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+        }
     }
 
     .project-img {
-        height: 200px;
+        margin-top: 2rem;
+        height: 300px;
         width: 100%;
         background-size: cover;
+        filter: grayscale(100%);
+        background-position: center;
+        transition: all 0.6s ease;
 
+        &:hover {
+            filter: grayscale(0);
+        }
+
+        .project-img-filter {
+            height: 300px;
+            width: 100%;
+        }
     }
-
 }
