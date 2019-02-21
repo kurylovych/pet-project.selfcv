@@ -10495,6 +10495,7 @@ html {
   font-size: 16px;
 }
 
+h5,
 h3,
 h2,
 h1 {
@@ -10502,7 +10503,6 @@ h1 {
   font-weight: bold;
 }
 
-h5,
 span,
 i,
 a,
@@ -10530,6 +10530,10 @@ h3 {
   font-size: 2.25rem;
 }
 
+h5 {
+  font-size: 1.5625rem;
+}
+
 p {
   font-size: 1rem;
 }
@@ -10547,10 +10551,6 @@ span {
 
 b {
   font-size: 1rem;
-}
-
-h5 {
-  font-size: 1.875rem;
 }
 
 .navbar {
@@ -10681,9 +10681,10 @@ h5 {
 .project .project-single h5 {
   left: 0;
   right: 0;
-  bottom: 20%;
-  position: absolute;
   opacity: 0;
+  bottom: 20%;
+  color: #000000;
+  position: absolute;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -10698,7 +10699,7 @@ h5 {
 }
 
 .comments {
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 .comments .comment-section {
@@ -10740,59 +10741,110 @@ h5 {
 }
 
 .projects-list {
-  margin-top: 4rem;
+  margin-top: 8.125rem;
 }
 
-.projects-list .first-project-img {
+.projects-list .title-project-image,
+.projects-list .general-project-image {
+  width: 100%;
   height: 400px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  transition: all 0.6s ease;
-}
-
-.projects-list .first-project-img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.projects-list .first-project-img .project-img-filter {
-  height: 400px;
-  width: 100%;
-}
-
-.projects-list .first-project-img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.projects-list .project-img {
-  margin-top: 2rem;
-  height: 300px;
-  width: 100%;
   background-size: cover;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  background-position: center;
   transition: all 0.6s ease;
+  background-position: center;
 }
 
-.projects-list .project-img:hover {
+.projects-list .title-project-image:hover,
+.projects-list .general-project-image:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
 
-.projects-list .project-img .project-img-filter {
-  height: 300px;
+.projects-list .title-project-image .filter,
+.projects-list .general-project-image .filter {
   width: 100%;
+  height: 400px;
+  opacity: 0.8;
+  background-color: #000000;
+  transition: all 0.6s ease;
+}
+
+.projects-list .title-project-image .filter:hover,
+.projects-list .general-project-image .filter:hover {
+  opacity: 0;
+}
+
+.projects-list .title-project-text a,
+.projects-list .general-project-text a {
+  text-decoration: none;
+}
+
+.projects-list .title-project-text a h5,
+.projects-list .general-project-text a h5 {
+  color: black;
+}
+
+.projects-list .title-project-text i,
+.projects-list .general-project-text i {
+  color: #ABABAB;
+}
+
+.projects-list .general-project .general-project-image {
+  margin-top: 3.375rem;
+  margin-bottom: 0.625rem;
+  height: 300px;
+}
+
+.projects-list .general-project .general-project-image .filter {
+  height: 300px;
+}
+
+.projects-list .general-project .general-project-text h5 {
+  margin-top: 1.75rem;
+}
+
+.projects-introduction h5 {
+  color: #fff;
+  text-align: center;
+  margin-top: 17vh;
+}
+
+.projects-introduction h5:before {
+  content: '"';
+  color: #FF3D00;
+  font-size: 5rem;
+}
+
+.single-project {
+  margin-top: 8.125rem;
+}
+
+.single-project .single-project-description {
+  margin-left: 2rem;
+}
+
+.single-project .conclusion {
+  margin: 4rem 0;
+  background-color: #000000;
+  padding: 4rem 0;
+}
+
+.single-project .conclusion .conclusion-text {
+  margin: 0 15%;
+  color: #fff;
+}
+
+.single-project .conclusion .conclusion-text h5 {
+  text-align: center;
+  margin-bottom: 1.25rem;
 }
 
 footer {
   background-color: #000000;
   color: white;
   padding: 50px 0;
+  margin-top: 5rem;
 }
 
 footer .short-info span {

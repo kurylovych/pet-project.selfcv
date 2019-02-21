@@ -37,6 +37,11 @@ h3 {
     font-size: 2.25rem;
 }
 
+h5 {
+    @extend %header-font;
+    font-size: 1.5625rem;
+}
+
 p {
     @extend %basic-font;
     font-size: 1rem;
@@ -57,9 +62,4 @@ span {
 b {
     @extend %basic-font-bold;
     font-size: 1rem;
-}
-
-h5 {
-    @extend %basic-font;
-    font-size: 1.875rem;
 }

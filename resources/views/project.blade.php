@@ -5,11 +5,40 @@
     <div>
         <div class="container-fluid projects-introduction">
             @include('inc.navbar')
+
+            {!! $project->introduction !!}
         </div>
 
-        <div class="container projects-list">
+        <div class="container single-project">
             <div class="row">
-                <div class="col-8"><img src="{{ Voyager::image( $project->conclusion_img ) }}" style="width: 100%"></div>
+                <div class="col-6">
+                    <div class="single-project-image">
+                        <img src="{{ Voyager::image( $project->body_collage ) }}"
+                             style="width: 100%">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="single-project-description">
+                        <h5>About Project</h5>
+                        <p>{!! $project->body !!}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="conclusion">
+                        <div class="conclusion-text">
+                            <h5>Conclusion</h5>
+                            <p>{!! $project->conclusion !!}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-8"><img src="{{ Voyager::image( $project->conclusion_img ) }}" style="width: 100%">
+                </div>
             </div>
         </div>
 

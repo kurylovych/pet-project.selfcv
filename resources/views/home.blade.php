@@ -123,11 +123,15 @@
                 @foreach($projects as $project)
                     <div class="col-4">
                         <div class="project-single">
-                            <div class="project-img"
-                                 style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
+                            <a href="project/{{$project->id}}">
+                                <div class="project-img"
+                                     style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
 
-                            </div>
-                            <h5>{{ $project->title}}</h5>
+                                </div>
+                            </a>
+                            <a href="project/{{$project->id}}">
+                                <h5>{{ $project->title}}</h5>
+                            </a>
                             {{--<img src="{{ Voyager::image( $project->introduction_img ) }}">--}}
                         </div>
                     </div>

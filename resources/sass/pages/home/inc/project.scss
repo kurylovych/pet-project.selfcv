@@ -22,9 +22,10 @@
         h5 {
             left: 0;
             right: 0;
-            bottom: 20%;
-            position: absolute;
             opacity: 0;
+            bottom: 20%;
+            color: $black;
+            position: absolute;
             transition: opacity 0.3s ease-in-out;
         }
 

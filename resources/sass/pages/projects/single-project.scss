@@ -1,0 +1,37 @@
+.projects-introduction {
+    h5 {
+        color: $white;
+        text-align: center;
+        margin-top: 17vh;
+
+        &:before {
+            content: '"';
+            color: $red;
+            font-size: 5rem;
+        }
+    }
+}
+
+.single-project {
+    margin-top: 8.125rem;
+
+    .single-project-description {
+        margin-left: 2rem;
+    }
+
+    .conclusion {
+        margin: 4rem 0;
+        background-color: $black;
+        padding: 4rem 0;
+
+        .conclusion-text {
+            margin: 0 15%;
+            color: $white;
+
+            h5 {
+                text-align: center;
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+}
