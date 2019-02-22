@@ -16,7 +16,7 @@
                     {{--<a class="nav-link" href="{{ url('/') }}"> Home <span class="sr-only"></span></a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-item {{ Request::is('projects') ? 'active' : '' }}">--}}
-                    {{--<a class="nav-link" href="{{ url('projects') }}"> Blog <span class="sr-only"></span></a>--}}
+                    {{--<a class="nav-link" href="{{ url('projects') }}"> Projects <span class="sr-only"></span></a>--}}
                 {{--</li>--}}
         </ul>
     </div>

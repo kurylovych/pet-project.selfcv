@@ -27,7 +27,8 @@ Route::get('/', function () {
 });
 
 Route::get('/projects', function () {
-    $projects = App\Project::orderBy('id', 'desc')->get();
+//    $projects = App\Project::orderBy('id', 'desc')->get();
+    $projects = App\Project::orderBy('id', 'desc')->paginate(7);
     $contacts = App\Contact::all();
     $navigations = App\Navigation::all();
     return view('projects', compact('projects', 'contacts', 'navigations'));
