@@ -10579,11 +10579,11 @@ b {
 }
 
 .introduction .intro-data {
-  position: absolute;
   top: 40vh;
   left: 20%;
   z-index: 9999;
   color: #fff;
+  position: absolute;
 }
 
 .introduction .intro-data h1 {
@@ -10597,11 +10597,11 @@ b {
 }
 
 .introduction .intro-image img {
-  width: 80%;
-  position: absolute;
-  text-align: center;
-  bottom: -5vh;
   right: 5%;
+  width: 80%;
+  bottom: -5vh;
+  text-align: center;
+  position: absolute;
 }
 
 .description {
@@ -10613,8 +10613,8 @@ b {
 }
 
 .description .contact-buttons {
-  text-align: center;
   margin: 50px 0;
+  text-align: center;
 }
 
 .description .contact-buttons a {
@@ -10630,8 +10630,8 @@ b {
 }
 
 .description .overview-box {
-  margin-top: 50px;
   width: 80%;
+  margin-top: 50px;
 }
 
 .description .overview-box .overview-content {
@@ -10652,8 +10652,8 @@ b {
 }
 
 .description .overview-box .skills {
-  display: inline-block;
   margin-right: 10px;
+  display: inline-block;
 }
 
 .project {
@@ -10666,11 +10666,11 @@ b {
 
 .project .project-single .project-img {
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  height: 300px;
   width: 100%;
+  height: 300px;
   background-size: cover;
   background-position: center;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .project .project-single img {

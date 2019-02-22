@@ -8,7 +8,7 @@
 
             @foreach($navigations as $navigation)
                 <li class="nav-item {{ Request::is($navigation->path) ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ $navigation->path}}"> {{$navigation->name}} <span class="sr-only"></span></a>
+                    <a class="nav-link" href="{{ url($navigation->path)}}"> {{$navigation->name}} <span class="sr-only"></span></a>
                 </li>
             @endforeach
 
