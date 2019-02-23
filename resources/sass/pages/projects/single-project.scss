@@ -2,13 +2,13 @@
     h5 {
         color: $white;
         text-align: center;
-        margin-top: 17vh;
+        margin-top: 10vh;
 
-        &:before {
-            content: '"';
-            color: $red;
-            font-size: 5rem;
-        }
+        //&:before {
+        //    content: '"';
+        //    color: $red;
+        //    font-size: 5rem;
+        //}
     }
 }
 

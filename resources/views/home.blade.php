@@ -16,9 +16,15 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="intro-image">
-                            <img src="{{ Voyager::image( $intro->img ) }}">
+                        {{--<div class="intro-image">--}}
+                            {{--<img src="{{ Voyager::image( $intro->img ) }}">--}}
+                        {{--</div>--}}
+
+                        <div class="intro-image"
+                             style="background-image: url({{ Voyager::image( $intro->img ) }})">
+                            <div class="intro-image-filter"></div>
                         </div>
+
                     </div>
                 </div>
             @endforeach
@@ -26,7 +32,7 @@
 
         <div class="container description">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-12 col-lg-12">
                     <div class="about">
                         @foreach($website_headers as $website_header)
                             @if ($website_header->name == 'About me')
@@ -51,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-6 col-lg-4">
                     <div class="overview-box">
                         @foreach($website_headers as $website_header)
                             @if ($website_header->name == 'Education')
@@ -77,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-6 col-lg-4">
                     <div class="overview-box">
                         @foreach($website_headers as $website_header)
                             @if ($website_header->name == 'Experience')
@@ -95,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="overview-box">
                         @foreach($website_headers as $website_header)
                             @if ($website_header->name == 'Skills')
@@ -122,7 +128,7 @@
             <div class="row">
 
                 @foreach($projects as $project)
-                    <div class="col-lg-4">
+                    <div class="col-12 col-lg-4">
                         <div class="project-single">
                             <a href="project/{{$project->id}}">
                                 <div class="project-img"

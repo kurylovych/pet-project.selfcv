@@ -7,7 +7,7 @@
             @include('inc.navbar')
 
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-8 col-lg-8">
                     <h5>“A person who never made a mistake never tried anything new.” – Albert Einstein</h5>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 @foreach($projects as $project)
 
                     @if ($loop->first)
-                        <div class="col-lg-6">
+                        <div class="col-12 col-lg-6">
                             <a href="project/{{$project->id}}">
                                 <div class="title-project-image"
                                      style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
@@ -29,7 +29,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-6 title-project-text">
+                        <div class="col-12 col-lg-6 title-project-text">
                             <a href="project/{{$project->id}}">
                                 <h5>{{ $project->title }}</h5>
                             </a>
@@ -39,7 +39,7 @@
                         </div>
 
                     @elseif ($loop->iteration)
-                        <div class="col-lg-4 general-project">
+                        <div class="col-12 col-lg-4 general-project">
                             <a href="project/{{$project->id}}">
                                 <div class="general-project-image"
                                      style="background-image: url({{ Voyager::image( $project->introduction_img ) }})">
@@ -53,7 +53,7 @@
                                 <a href="project/{{$project->id}}">
                                     <h5>{{ $project->title }}</h5>
                                 </a>
-                                <p>{!! str_limit($project->body, 200) !!}</p>
+                                {!! str_limit($project->body, 200) !!}
                             </div>
                         </div>
                     @endif

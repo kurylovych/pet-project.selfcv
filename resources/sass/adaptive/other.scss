@@ -1,0 +1,52 @@
+///* Large desktop */
+//@media (min-width: 1200px) { ... }
+//
+///* Portrait tablet to landscape and desktop */
+//@media (min-width: 768px) and (max-width: 979px) { ... }
+//
+///* Landscape phone to portrait tablet */
+
+//
+///* Landscape phones and down */
+
+
+//@media (min-width: 1200px) {
+//
+//}
+//
+//@media (min-width: 992px) and (max-width: 1199px) {
+//
+//}
+
+
+@media (max-width: 991px) {
+    .introduction {
+        .intro-data {
+            top: 60vh;
+            left: 0;
+
+            h1 {
+                font-size: 5rem;
+            }
+        }
+
+        .intro-image {
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+
+// single page
+@media (max-width: 991px) {
+    .single-project {
+        .single-project-description {
+            h5 {
+                text-align: center;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+

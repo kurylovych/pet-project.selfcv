@@ -19,6 +19,10 @@
 @import 'pages/projects/projects';
 @import 'pages/projects/single-project';
 
+// Adaptive
+@import "adaptive/other";
+@import 'adaptive/max576';
+
 // inc
 @import 'pages/footer';
 

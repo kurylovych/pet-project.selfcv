@@ -18,16 +18,29 @@
     }
 
     .intro-image {
+        //left: 0;
+        //top: -28px;
         z-index: 0;
+        width: 100%;
         height: 100vh;
-        text-align: center;
+        margin-top: 4rem;
+        margin-left: -1rem;
+        //position: absolute;
+        //text-align: center;
+        background-size: cover;
+        //background-position: center;
 
-        img {
-            right: 5%;
-            width: 80%;
-            bottom: -5vh;
-            text-align: center;
-            position: absolute;
+        .intro-image-filter {
+            display: none;
         }
+
+
+        //img {
+        //    right: 5%;
+        //    width: 80%;
+        //    bottom: -5vh;
+        //    text-align: center;
+        //    position: absolute;
+        //}
     }
 }

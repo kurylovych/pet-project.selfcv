@@ -10555,6 +10555,7 @@ b {
 
 .navbar {
   padding: 0;
+  z-index: 9999;
 }
 
 .navbar .nav-item {
@@ -10592,16 +10593,15 @@ b {
 
 .introduction .intro-image {
   z-index: 0;
+  width: 100%;
   height: 100vh;
-  text-align: center;
+  margin-top: 4rem;
+  margin-left: -1rem;
+  background-size: cover;
 }
 
-.introduction .intro-image img {
-  right: 5%;
-  width: 80%;
-  bottom: -5vh;
-  text-align: center;
-  position: absolute;
+.introduction .intro-image .intro-image-filter {
+  display: none;
 }
 
 .description {
@@ -10736,7 +10736,7 @@ b {
 }
 
 .projects-introduction {
-  height: 50vh;
+  height: 30vh;
   background-color: black;
 }
 
@@ -10807,13 +10807,7 @@ b {
 .projects-introduction h5 {
   color: #fff;
   text-align: center;
-  margin-top: 17vh;
-}
-
-.projects-introduction h5:before {
-  content: '"';
-  color: #FF3D00;
-  font-size: 5rem;
+  margin-top: 10vh;
 }
 
 .single-project {
@@ -10838,6 +10832,236 @@ b {
 .single-project .conclusion .conclusion-text h5 {
   text-align: center;
   margin-bottom: 1.25rem;
+}
+
+@media (max-width: 991px) {
+  .introduction .intro-data {
+    top: 60vh;
+    left: 0;
+  }
+
+  .introduction .intro-data h1 {
+    font-size: 5rem;
+  }
+
+  .introduction .intro-image {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .single-project .single-project-description h5 {
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.625rem;
+  }
+
+  h2 {
+    font-size: 0.875rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  h5 {
+    font-size: 0.8125rem;
+  }
+
+  p {
+    font-size: 0.625rem;
+  }
+
+  i,
+  a {
+    font-size: 0.5rem;
+  }
+
+  span {
+    font-size: 0.625rem;
+  }
+
+  b {
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .introduction .intro-data {
+    top: 60vh;
+    left: 2rem;
+  }
+
+  .introduction .intro-data h1 {
+    font-size: 2.625rem;
+  }
+
+  .introduction .intro-image {
+    top: 0;
+    margin-top: -28px;
+    position: absolute;
+    margin-left: -15px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .introduction .intro-image .intro-image-filter {
+    display: block;
+    opacity: 0.6;
+    background-color: #000000;
+    height: 100vh;
+  }
+
+  .description {
+    margin-top: 0;
+  }
+
+  .description .about h2 {
+    margin: 45px 0 10px 0;
+  }
+
+  .description .contact-buttons {
+    margin: 25px 0;
+  }
+
+  .description .overview-box {
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .description .overview-box .overview-content {
+    margin: 13px 0;
+  }
+
+  .project h2 {
+    margin: 40px 0 16px 0;
+  }
+
+  .project .project-single .project-img {
+    height: 200px;
+  }
+
+  .comments {
+    min-height: 0;
+  }
+
+  .comments h2 {
+    margin: 0 0 16px 0;
+  }
+
+  .comments .carousel .carousel-item .comment-section {
+    width: 100%;
+  }
+
+  .comments .carousel .carousel-item .comment-section .comment-content {
+    padding: 5vh 10px;
+  }
+
+  .comments .carousel .carousel-item .comment-section .comment-content p {
+    line-height: 20px;
+  }
+
+  .comments .carousel .carousel-control-prev,
+  .comments .carousel .carousel-control-next {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-introduction {
+    height: 30vh;
+  }
+
+  .projects-introduction h5 {
+    margin-top: 7vh;
+  }
+
+  .projects-list {
+    margin-top: 3rem;
+  }
+
+  .projects-list .title-project-image {
+    height: 200px;
+  }
+
+  .projects-list .title-project-image .filter {
+    height: 200px;
+  }
+
+  .projects-list .title-project-text h5 {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .projects-list .title-project-text p {
+    margin-bottom: 0;
+  }
+
+  .projects-list .general-project .general-project-image {
+    height: 200px;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .projects-list .general-project .general-project-image .filter {
+    height: 200px;
+  }
+
+  .projects-list .general-project .general-project-text h5 {
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .single-project {
+    margin-top: 3rem;
+  }
+
+  .single-project .single-project-description {
+    margin-left: 0;
+  }
+
+  .single-project .single-project-description h5 {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .single-project .conclusion {
+    margin: 1rem 0;
+    padding: 1.5rem 0;
+  }
+
+  .single-project .conclusion .conclusion-text {
+    margin: 0 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    margin-top: 2rem !important;
+  }
+
+  footer .short-info {
+    text-align: center;
+  }
+
+  footer .goodbye-text {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .nav-item {
+    margin-right: 5px;
+  }
 }
 
 footer {
